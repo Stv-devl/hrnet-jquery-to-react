@@ -3,7 +3,7 @@ const dataDepartement = [
   "Marketing",
   "Engineering",
   "Human resources",
-  "legal",
+  "Legal",
 ];
 
 const americanStates = [
