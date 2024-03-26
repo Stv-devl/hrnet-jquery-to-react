@@ -1,0 +1,14 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-Wrapper {
+    display: flex;
+    gap: 10px;
+
+    .nav-link {
+      cursor: pointer;
+    }
+  }
+}
