@@ -1,9 +1,10 @@
-import useManageApi from "../../hook/useManageApi";
+import { useContext } from "react";
+import { ApiContext } from "../../hook/ManageApi";
 
 const Home = () => {
-  const { data, loading, error } = useManageApi();
+  const { data } = useContext(ApiContext);
 
-  console.log(data, loading);
+  console.log(data);
 
   return (
     <main>

@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import apiService from "../services/apiService";
 
-function useManageApi() {
+export const ApiContext = createContext();
+
+function ApiProvider({ children }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,7 +24,11 @@ function useManageApi() {
     fetchData();
   }, []);
 
-  return { data, loading, error };
+  return (
+    <ApiContext.Provider value={{ data, loading, error }}>
+      {children}
+    </ApiContext.Provider>
+  );
 }
 
-export default useManageApi;
+export default ApiProvider;
