@@ -1,10 +1,6 @@
-const Dropdown = ({ options, placeholder, setId, selected, setSelected }) => {
+const Dropdown = ({ options, placeholder, name, selected, onChange }) => {
   return (
-    <select
-      id={setId}
-      value={selected}
-      onChange={(e) => setSelected(e.target.value)}
-    >
+    <select id={name} name={name} value={selected} onChange={onChange}>
       <option value="">{placeholder}</option>
       {options.map((option, index) => (
         <option key={`${option}${index}`} value={option}>
