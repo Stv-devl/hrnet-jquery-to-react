@@ -1,4 +1,4 @@
-const dataDepartement = [
+const dataDepartment = [
   "Sale",
   "Marketing",
   "Engineering",
@@ -59,7 +59,7 @@ const americanStates = [
   "Wyoming",
 ];
 
-export const data = {
-  departement: dataDepartement,
-  states: americanStates,
+export const datas = {
+  department: dataDepartment,
+  state: americanStates,
 };

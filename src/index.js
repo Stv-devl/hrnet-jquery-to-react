@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./styles/index.scss";
-import ApiProvider from "./hook/ManageApi";
+import ApiProvider from "./context/ManageApi";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

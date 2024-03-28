@@ -14,7 +14,7 @@ const Banner = () => {
         <Link className="nav-link" to={`/add`}>
           add worker
         </Link>
-        <Link className="nav-link" to={`/labour`}>
+        <Link className="nav-link" to={`/list`}>
           labour list
         </Link>
       </div>
