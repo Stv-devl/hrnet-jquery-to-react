@@ -1,36 +1,28 @@
-import { useState, useEffect } from "react";
-import { validation } from "../utils/validation";
+import { useState } from "react";
+import { validation } from "../components/form/validation/validation";
 
-const useValidation = (formData, isSubmitted) => {
-  const [isValidate, setIsValidate] = useState(false);
-  const [error, setError] = useState({});
+const useValidation = (formData) => {
+  const [errors, setErrors] = useState({});
 
-  useEffect(() => {
-    if (isSubmitted) {
-      const validate = async () => {
-        try {
-          await validation.validate(formData, { abortEarly: false });
-          setIsValidate(true);
-          setError({});
-        } catch (err) {
-          const validationErrors = err.inner.reduce(
-            (acc, currentError) => ({
-              ...acc,
-              [currentError.path]: currentError.message,
-            }),
-            {}
-          );
-          setIsValidate(false);
-          setError(validationErrors);
-        }
-      };
-      validate();
-    } else {
-      setError({});
+  const validateFormData = async () => {
+    try {
+      await validation.validate(formData, { abortEarly: false });
+      setErrors({});
+      return { isValid: true };
+    } catch (err) {
+      const validationErrors = err.inner.reduce(
+        (acc, currentError) => ({
+          ...acc,
+          [currentError.path]: currentError.message,
+        }),
+        {}
+      );
+      setErrors(validationErrors);
+      return { isValid: false, errors: validationErrors };
     }
-  }, [formData, isSubmitted]);
+  };
 
-  return { error, isValidate };
+  return { errors, validateFormData };
 };
 
 export default useValidation;

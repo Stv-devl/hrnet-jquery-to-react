@@ -59,7 +59,21 @@ const americanStates = [
   "Wyoming",
 ];
 
+const initialState = {
+  id: "",
+  firstname: "",
+  lastname: "",
+  birthday: "",
+  street: "",
+  city: "",
+  zip: "",
+  state: "",
+  start: "",
+  department: "",
+};
+
 export const datas = {
   department: dataDepartment,
   state: americanStates,
+  initialState: initialState,
 };
