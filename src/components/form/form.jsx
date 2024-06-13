@@ -2,7 +2,7 @@ import Dropdown from "./dropdown/Dropdown";
 import Input from "./input/Input";
 import ManageDate from "./managedate/ManageDate";
 import useManageForm from "../../hook/useManageForm";
-import Modal from "../modal/Modal";
+import Modal from "./modal/Modal";
 import { useState } from "react";
 
 const Form = () => {
@@ -56,11 +56,11 @@ const Form = () => {
             error={errors.city}
           />
           <Input
-            name="zip"
+            name="zip_code"
             labelText="ZIP code"
             handleChange={handleChange}
-            value={formData.zip}
-            error={errors.zip}
+            value={formData.zip_code}
+            error={errors.zip_code}
           />
           <Dropdown
             labelText="State"
@@ -77,10 +77,10 @@ const Form = () => {
 
           <ManageDate
             labelText="Date of start"
-            name="start"
-            selected={formData.start}
+            name="start_date"
+            selected={formData.start_date}
             handleChange={handleChange}
-            error={errors.start}
+            error={errors.start_date}
           />
           <Dropdown
             labelText="Department"

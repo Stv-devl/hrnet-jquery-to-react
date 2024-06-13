@@ -7,7 +7,7 @@ const Input = ({ name, labelText, handleChange, value, error }) => {
         id={name}
         name={name}
         value={value}
-        onChange={handleChange}
+        onChange={(e) => handleChange({ [name]: e.target.value })}
       />
       {error && <span className="error-message">{error}</span>}
     </div>

@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { datas } from "../data/datas";
-import { isoDate } from "../utils/dateFormater";
 import useValidation from "./useValidation";
 import postService from "../services/postService";
+import { ApiContext } from "../context/ManageApi";
 
 const useManageForm = (setIsModalOpen) => {
   const { initialState } = datas;
@@ -11,12 +11,12 @@ const useManageForm = (setIsModalOpen) => {
   const [formData, setFormData] = useState(initialState);
 
   const { errors, validateFormData } = useValidation(formData);
+  const { updateData } = useContext(ApiContext);
 
-  const handleChange = (eOrDate, name) => {
-    const value = eOrDate.target ? eOrDate.target.value : isoDate(eOrDate);
+  const handleChange = (updates) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name || eOrDate.target.name]: value,
+      ...updates,
     }));
   };
 
@@ -28,7 +28,10 @@ const useManageForm = (setIsModalOpen) => {
         const uniqueId = uuidv4();
         const updatedFormData = { ...formData, id: uniqueId };
         console.log("Validation success:", updatedFormData);
-        await postService(updatedFormData);
+
+        const newEmployeeData = await postService(updatedFormData);
+        updateData(newEmployeeData);
+
         console.log("Data successfully sent to the server");
         setFormData(initialState);
         setIsModalOpen(true);

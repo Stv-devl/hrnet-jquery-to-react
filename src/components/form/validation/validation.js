@@ -29,11 +29,11 @@ export const validation = Yup.object({
       /^[a-zA-Z\s]{2,25}$/,
       "The city must be between 2 and 25 characters and contain only letters."
     ),
-  zip: Yup.string()
+  zip_code: Yup.string()
     .required("The ZIPcode is required")
     .matches(/^\d{5}$/, "The ZIPcode must contain 5 digits."),
   state: Yup.string().required("The State is required"),
   department: Yup.string().required("The department is required"),
   birthday: dateValidation("The birthday"),
-  start: dateValidation("The worker start date"),
+  start_date: dateValidation("The worker start date"),
 }).required();

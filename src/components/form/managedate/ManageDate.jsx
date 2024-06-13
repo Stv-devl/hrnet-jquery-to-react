@@ -1,6 +1,6 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { dateYearsAgo } from "../../../utils/dateFormater";
+import { dateYearsAgo, isoDate } from "../../../utils/dateFormater";
 
 const ManageDate = ({ name, labelText, handleChange, selected, error }) => {
   return (
@@ -16,7 +16,7 @@ const ManageDate = ({ name, labelText, handleChange, selected, error }) => {
         showYearDropdown
         dropdownMode="select"
         selected={selected}
-        onChange={(date) => handleChange(date, name)}
+        onChange={(date) => handleChange({ [name]: isoDate(date) })}
       />
       {error && <span className="error-message">{error}</span>}
     </div>

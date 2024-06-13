@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useCallback } from "react";
 import apiService from "../services/apiService";
 
 export const ApiContext = createContext();
@@ -7,6 +7,10 @@ function ApiProvider({ children }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const updateData = useCallback((newData) => {
+    setData((prevData) => [...prevData, newData]);
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +29,7 @@ function ApiProvider({ children }) {
   }, []);
 
   return (
-    <ApiContext.Provider value={{ data, loading, error }}>
+    <ApiContext.Provider value={{ data, updateData, loading, error }}>
       {children}
     </ApiContext.Provider>
   );

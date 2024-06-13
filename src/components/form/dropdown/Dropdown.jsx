@@ -14,7 +14,12 @@ const Dropdown = ({
   return (
     <div className="input-wrapper">
       <label htmlFor={name}>{labelText}</label>
-      <select id={name} name={name} value={value} onChange={handleChange}>
+      <select
+        id={name}
+        name={name}
+        value={value}
+        onChange={(e) => handleChange({ [name]: e.target.value })}
+      >
         <option>{placeholder}</option>
         {optionChoice.map((option, index) => (
           <option key={`${option}${index}`} value={option}>

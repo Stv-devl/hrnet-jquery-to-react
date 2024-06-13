@@ -66,14 +66,27 @@ const initialState = {
   birthday: "",
   street: "",
   city: "",
-  zip: "",
+  zip_code: "",
   state: "",
-  start: "",
+  start_date: "",
   department: "",
 };
+
+const legend = [
+  { name: "firstname", label: "First name" },
+  { name: "lastname", label: "Last Name" },
+  { name: "start_date", label: "Start date" },
+  { name: "department", label: "Department" },
+  { name: "birthday", label: "Date of Birth" },
+  { name: "street", label: "Street" },
+  { name: "city", label: "City" },
+  { name: "state", label: "State" },
+  { name: "zip_code", label: "Zip Code" },
+];
 
 export const datas = {
   department: dataDepartment,
   state: americanStates,
   initialState: initialState,
+  legend: legend,
 };
