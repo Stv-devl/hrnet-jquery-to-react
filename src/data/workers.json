@@ -1319,6 +1319,18 @@
       "state": "New York",
       "start_date": "1997-10-22",
       "department": "Sale"
+    },
+    {
+      "id": "57a93815-4649-4156-a5fd-1166264d5b39",
+      "firstname": "Stevan",
+      "lastname": "Lansade",
+      "birthday": "2006-03-01",
+      "street": "77 Massachusetts Avenue",
+      "city": "Lorient",
+      "zip_code": "56565",
+      "state": "Dakota du Sud",
+      "start_date": "2006-05-29",
+      "department": "Sale"
     }
   ]
 }

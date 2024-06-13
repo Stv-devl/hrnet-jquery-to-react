@@ -14,22 +14,24 @@ const Form = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="worker-personnal-information">
-          <h2>Personals informations</h2>
-          <Input
-            name="firstname"
-            labelText="First name"
-            handleChange={handleChange}
-            value={formData.firstname}
-            error={errors.firstname}
-          />
-          <Input
-            name="lastname"
-            labelText="Last name"
-            handleChange={handleChange}
-            value={formData.lastname}
-            error={errors.lastname}
-          />
+        <div className="title-wrapper">
+          <h2>Personals</h2>
+          <div className="input-container">
+            <Input
+              name="firstname"
+              labelText="First name"
+              handleChange={handleChange}
+              value={formData.firstname}
+              error={errors.firstname}
+            />
+            <Input
+              name="lastname"
+              labelText="Last name"
+              handleChange={handleChange}
+              value={formData.lastname}
+              error={errors.lastname}
+            />
+          </div>
           <ManageDate
             labelText="Date of Birth"
             name="birthday"
@@ -39,61 +41,69 @@ const Form = () => {
           />
         </div>
 
-        <div className="worker-adress">
+        <div className="title-wrapper">
           <h2>Adress</h2>
-          <Input
-            name="street"
-            labelText="Street"
-            handleChange={handleChange}
-            value={formData.street}
-            error={errors.street}
-          />
-          <Input
-            name="city"
-            labelText="City"
-            handleChange={handleChange}
-            value={formData.city}
-            error={errors.city}
-          />
-          <Input
-            name="zip_code"
-            labelText="ZIP code"
-            handleChange={handleChange}
-            value={formData.zip_code}
-            error={errors.zip_code}
-          />
-          <Dropdown
-            labelText="State"
-            placeholder="Select a state"
-            name="state"
-            value={formData.state}
-            handleChange={handleChange}
-            error={errors.state}
-          />
+          <div className="input-container">
+            <Input
+              name="street"
+              labelText="Street"
+              handleChange={handleChange}
+              value={formData.street}
+              error={errors.street}
+            />
+            <Input
+              name="city"
+              labelText="City"
+              handleChange={handleChange}
+              value={formData.city}
+              error={errors.city}
+            />
+          </div>
+          <div className="input-container">
+            <Input
+              name="zip_code"
+              labelText="ZIP code"
+              handleChange={handleChange}
+              value={formData.zip_code}
+              error={errors.zip_code}
+            />
+            <Dropdown
+              labelText="State"
+              placeholder="Select a state"
+              name="state"
+              value={formData.state}
+              handleChange={handleChange}
+              error={errors.state}
+            />
+          </div>
         </div>
 
-        <div className="internal information">
-          <h2>Worker status</h2>
-
-          <ManageDate
-            labelText="Date of start"
-            name="start_date"
-            selected={formData.start_date}
-            handleChange={handleChange}
-            error={errors.start_date}
-          />
-          <Dropdown
-            labelText="Department"
-            placeholder="Select a department"
-            name="department"
-            value={formData.department}
-            handleChange={handleChange}
-            error={errors.department}
-          />
+        <div className="title-wrapper">
+          <h2>Status</h2>
+          <div className="input-container">
+            <ManageDate
+              labelText="Date of start"
+              name="start_date"
+              selected={formData.start_date}
+              handleChange={handleChange}
+              error={errors.start_date}
+            />
+            <Dropdown
+              labelText="Department"
+              placeholder="Select a department"
+              name="department"
+              value={formData.department}
+              handleChange={handleChange}
+              error={errors.department}
+            />
+          </div>
         </div>
-        <button type="submit" className="add-button">
-          Add
-        </button>
+
+        <div className="button-wrapper">
+          <button type="submit" className="add-button">
+            Add
+          </button>
+        </div>
       </form>
       <>{isModalOpen && <Modal closeModal={() => setIsModalOpen(false)} />}</>
     </>

@@ -14,8 +14,27 @@ body {
   color: $textBlack;
 }
 
-.nav-link {
+h1 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-link,
+.add-button {
   font-size: 17px;
   font-weight: 500;
   color: $white;
+}
+
+.title {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: $textGreen;
 }

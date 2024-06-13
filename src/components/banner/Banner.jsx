@@ -5,13 +5,16 @@ import { faPlus, faList } from "@fortawesome/free-solid-svg-icons";
 const Banner = () => {
   return (
     <nav className="main-nav">
-      <Link className="main-nav-logo" to={`/home`}>
-        <img
-          className="main-nav-logo-image"
-          src="./logo.png"
-          alt="HRnet Logo"
-        />
-      </Link>
+      <div className="title-wrapper">
+        <Link className="main-nav-logo" to={`/home`}>
+          <img
+            className="main-nav-logo-image"
+            src="./logo.png"
+            alt="HRnet Logo"
+          />
+        </Link>
+        <p className="title">HRnet</p>
+      </div>
       <div className="nav-Wrapper">
         <Link className="nav-link" to={`/add`}>
           <FontAwesomeIcon icon={faPlus} />

@@ -11,16 +11,16 @@
   outline: none;
 }
 
+/*
 body {
-  max-width: 1650px;
-}
+
+}*/
 
 main {
-  padding-left: 117px;
-  padding-top: 91px;
+  @include center-row;
+  padding-top: 20px;
   width: 100%;
   height: 100%;
-  max-width: 1650px;
 }
 
 /*************Text link & img fit***************/

@@ -1,0 +1,29 @@
+.input-wrapper {
+  @include direction-column;
+  margin-bottom: 15px;
+  width: 100%;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid $textLightGrey;
+    border-radius: 8px;
+    background-color: $backgroundLightGrey;
+    transition: border-color 0.3s ease-in-out;
+    @include shadow02;
+
+    &:focus {
+      border-color: $backgroundGreen;
+    }
+  }
+
+  .error-message {
+    color: $textRed;
+    font-size: 12px;
+    margin-top: 7px;
+  }
+}
