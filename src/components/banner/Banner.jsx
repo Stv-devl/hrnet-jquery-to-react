@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faList } from "@fortawesome/free-solid-svg-icons";
 
 const Banner = () => {
   return (
@@ -12,10 +14,12 @@ const Banner = () => {
       </Link>
       <div className="nav-Wrapper">
         <Link className="nav-link" to={`/add`}>
-          add worker
+          <FontAwesomeIcon icon={faPlus} />
+          <p> Add worker</p>
         </Link>
         <Link className="nav-link" to={`/list`}>
-          labour list
+          <FontAwesomeIcon icon={faList} />
+          <p> Labour list</p>
         </Link>
       </div>
     </nav>

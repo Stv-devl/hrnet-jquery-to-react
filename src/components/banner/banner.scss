@@ -2,13 +2,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  @include shadow;
+
+  .main-nav-logo-image {
+    width: 150px;
+  }
 
   .nav-Wrapper {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 
     .nav-link {
+      @include center-row;
+      gap: 10px;
+      background-color: $backgroundlightGreen;
+      padding: 15px;
+
+      border-radius: 15px;
       cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      @include shadow;
+
+      &:hover {
+        background-color: $backgroundGreen;
+        font-size: 18px;
+      }
     }
   }
 }
