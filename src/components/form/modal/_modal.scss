@@ -11,19 +11,25 @@
 
   .modal-wrapper {
     @include direction-column;
-    width: 400px;
-    height: 252px;
-    background-color: white;
-    padding: 32px;
+    background-color: $white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    @include shadow02;
 
-    .modale-desc {
-      margin: 22px 0 22px 0;
+    .check-icon {
+      font-size: 45px;
+      color: $backgroundlightGreen;
     }
 
-    .close-btn {
-      background-color: lightgreen;
-      &:hover {
-        background-color: palegreen;
+    .modale-desc {
+      margin: 22px 0;
+    }
+
+    .button-wrapper {
+      @include center-row;
+      margin-top: 20px;
+      .close-btn {
+        @include button;
       }
     }
   }

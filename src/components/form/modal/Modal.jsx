@@ -6,9 +6,9 @@ const Modale = ({ closeModal }) => {
     <>
       <div className="modal-container">
         <div className="modal-wrapper">
-          <FontAwesomeIcon icon={faCircleCheck} />
+          <FontAwesomeIcon icon={faCircleCheck} className="check-icon" />
           <p className="modale-desc">You have successfully added a worker</p>
-          <div className="btn-wrapper">
+          <div className="button-wrapper">
             <button className="close-btn" onClick={() => closeModal()}>
               Back
             </button>
