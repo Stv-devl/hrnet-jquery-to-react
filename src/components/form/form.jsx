@@ -5,6 +5,13 @@ import useManageForm from "../../hook/useManageForm";
 import Modal from "./modal/Modal";
 import { useState } from "react";
 
+/**
+ * Form component
+ * Renders a form with inputs for personal details, address, and status.
+ * Handles form submission and displays a modal on successful submission.
+ * @returns {JSX.Element} - The form component.
+ */
+
 const Form = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 

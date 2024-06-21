@@ -1,5 +1,10 @@
 import Form from "../../components/form/Form";
 
+/**
+ * CreateEmployee component
+ * Renders a page with a form to add a new employee.
+ * @returns {JSX.Element} - The CreateEmployee page component.
+ */
 const CreateEmployee = () => {
   return (
     <main>

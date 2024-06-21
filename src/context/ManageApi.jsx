@@ -3,6 +3,14 @@ import apiService from "../services/apiService";
 
 export const ApiContext = createContext();
 
+/**
+ * ApiProvider component
+ * Provides API data context to its children components. Fetches data from an API and handles loading and error states.
+ * @param {Object} props - The component props.
+ * @param {React.ReactNode} props.children - The children components to be wrapped by the provider.
+ * @returns {JSX.Element} - The API context provider component.
+ */
+
 function ApiProvider({ children }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -5,6 +5,13 @@ import useValidation from "./useValidation";
 import postService from "../services/postService";
 import { ApiContext } from "../context/ManageApi";
 
+/**
+ * Custom hook for managing form data and submission.
+ * Handles form state, validation, and submission logic.
+ * @param {function} setIsModalOpen - Function to control the modal visibility state.
+ * @returns {Object} - The form data, errors, and functions to handle change and submit events.
+ */
+
 const useManageForm = (setIsModalOpen) => {
   const { initialState } = datas;
 
@@ -13,6 +20,10 @@ const useManageForm = (setIsModalOpen) => {
   const { errors, validateFormData } = useValidation(formData);
   const { updateData } = useContext(ApiContext);
 
+  /**
+   * Handles changes to the form data.
+   * @param {Object} updates - The updates to be applied to the form data.
+   */
   const handleChange = (updates) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
@@ -20,6 +31,11 @@ const useManageForm = (setIsModalOpen) => {
     }));
   };
 
+  /**
+   * Handles form submission.
+   * Validates the form data and submits it if valid.
+   * @param {Event} e - The form submission event.
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { isValid, errors } = await validateFormData();

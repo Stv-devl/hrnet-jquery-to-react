@@ -1,4 +1,9 @@
 const Home = () => {
+  /**
+   * Home component
+   * Renders the home page with a welcome message and an image.
+   * @returns {JSX.Element} - The Home component.
+   */
   return (
     <main>
       <h1>Home page</h1>

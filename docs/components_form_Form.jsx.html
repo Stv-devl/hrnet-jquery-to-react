@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/form/Form.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/form/Form.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Dropdown from "./dropdown/Dropdown";
+import Input from "./input/Input";
+import ManageDate from "./managedate/ManageDate";
+import useManageForm from "../../hook/useManageForm";
+import Modal from "./modal/Modal";
+import { useState } from "react";
+
+/**
+ * Form component
+ * Renders a form with inputs for personal details, address, and status.
+ * Handles form submission and displays a modal on successful submission.
+ * @returns {JSX.Element} - The form component.
+ */
+
+const Form = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const { formData, errors, handleChange, handleSubmit } =
+    useManageForm(setIsModalOpen);
+
+  return (
+    &lt;>
+      &lt;form onSubmit={handleSubmit}>
+        &lt;div className="title-wrapper">
+          &lt;h2>Personals&lt;/h2>
+          &lt;div className="input-container">
+            &lt;Input
+              name="firstname"
+              labelText="First name"
+              handleChange={handleChange}
+              value={formData.firstname}
+              error={errors.firstname}
+            />
+            &lt;Input
+              name="lastname"
+              labelText="Last name"
+              handleChange={handleChange}
+              value={formData.lastname}
+              error={errors.lastname}
+            />
+          &lt;/div>
+          &lt;ManageDate
+            labelText="Date of Birth"
+            name="birthday"
+            selected={formData.birthday}
+            handleChange={handleChange}
+            error={errors.birthday}
+          />
+        &lt;/div>
+
+        &lt;div className="title-wrapper">
+          &lt;h2>Adress&lt;/h2>
+          &lt;div className="input-container">
+            &lt;Input
+              name="street"
+              labelText="Street"
+              handleChange={handleChange}
+              value={formData.street}
+              error={errors.street}
+            />
+            &lt;Input
+              name="city"
+              labelText="City"
+              handleChange={handleChange}
+              value={formData.city}
+              error={errors.city}
+            />
+          &lt;/div>
+          &lt;div className="input-container">
+            &lt;Input
+              name="zip_code"
+              labelText="ZIP code"
+              handleChange={handleChange}
+              value={formData.zip_code}
+              error={errors.zip_code}
+            />
+            &lt;Dropdown
+              labelText="State"
+              placeholder="Select a state"
+              name="state"
+              value={formData.state}
+              handleChange={handleChange}
+              error={errors.state}
+            />
+          &lt;/div>
+        &lt;/div>
+
+        &lt;div className="title-wrapper">
+          &lt;h2>Status&lt;/h2>
+          &lt;div className="input-container">
+            &lt;ManageDate
+              labelText="Date of start"
+              name="start_date"
+              selected={formData.start_date}
+              handleChange={handleChange}
+              error={errors.start_date}
+            />
+            &lt;Dropdown
+              labelText="Department"
+              placeholder="Select a department"
+              name="department"
+              value={formData.department}
+              handleChange={handleChange}
+              error={errors.department}
+            />
+          &lt;/div>
+        &lt;/div>
+
+        &lt;div className="button-wrapper">
+          &lt;button type="submit" className="add-button">
+            Add
+          &lt;/button>
+        &lt;/div>
+      &lt;/form>
+      &lt;>{isModalOpen &amp;&amp; &lt;Modal closeModal={() => setIsModalOpen(false)} />}&lt;/>
+    &lt;/>
+  );
+};
+
+export default Form;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#ApiProvider">ApiProvider</a></li><li><a href="global.html#Banner">Banner</a></li><li><a href="global.html#CreateEmployee">CreateEmployee</a></li><li><a href="global.html#Dropdown">Dropdown</a></li><li><a href="global.html#EmployeeList">EmployeeList</a></li><li><a href="global.html#Error">Error</a></li><li><a href="global.html#Form">Form</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Loading">Loading</a></li><li><a href="global.html#ManageDate">ManageDate</a></li><li><a href="global.html#Modale">Modale</a></li><li><a href="global.html#apiService">apiService</a></li><li><a href="global.html#dateValidation">dateValidation</a></li><li><a href="global.html#dateYearsAgo">dateYearsAgo</a></li><li><a href="global.html#isoDate">isoDate</a></li><li><a href="global.html#nameValidation">nameValidation</a></li><li><a href="global.html#postService">postService</a></li><li><a href="global.html#useManageForm">useManageForm</a></li><li><a href="global.html#useValidation">useValidation</a></li><li><a href="global.html#validation">validation</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri Jun 21 2024 15:15:40 GMT+0700 (Indochina Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

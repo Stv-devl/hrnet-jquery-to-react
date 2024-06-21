@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faList } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * The componant is navigation bar.
+ * @returns {JSX.Element} - The navigation with with logo, title and 2 button with link for add worker or see the labour list .
+ */
+
 const Banner = () => {
   return (
     <nav className="main-nav">
