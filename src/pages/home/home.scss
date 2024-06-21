@@ -1,0 +1,19 @@
+.home-text {
+  margin-top: 40px;
+  text-align: center;
+  color: $textGreen;
+}
+
+.home-image {
+  width: 800px;
+  border-radius: 20px;
+  margin-top: 50px;
+
+  @media screen and (max-width: 810px) {
+    width: 630px;
+  }
+
+  @media screen and (max-width: $breakup) {
+    width: 310px;
+  }
+}

@@ -1319,42 +1319,7 @@
       "state": "New York",
       "start_date": "1997-10-22",
       "department": "Sale"
-    },
-    {
-      "id": "57a93815-4649-4156-a5fd-1166264d5b39",
-      "firstname": "Stevan",
-      "lastname": "Lansade",
-      "birthday": "2006-03-01",
-      "street": "77 Massachusetts Avenue",
-      "city": "Lorient",
-      "zip_code": "56565",
-      "state": "Dakota du Sud",
-      "start_date": "2006-05-29",
-      "department": "Sale"
-    },
-    {
-      "id": "68a29085-fed1-4611-9a5e-e56dd4aa0a09",
-      "firstname": "David",
-      "lastname": "Goti",
-      "birthday": "2001-02-03",
-      "street": "77 Massachusetts Avenue",
-      "city": "Boston",
-      "zip_code": "56565",
-      "state": "Californie",
-      "start_date": "2006-06-05",
-      "department": "Legal"
-    },
-    {
-      "id": "d74d48ae-0a72-41d4-bf98-6c11baa42f0c",
-      "firstname": "Emma",
-      "lastname": "Robert",
-      "birthday": "2002-03-02",
-      "street": "77 Massachusetts Avenue",
-      "city": "Boston",
-      "zip_code": "56565",
-      "state": "Connecticut",
-      "start_date": "2006-06-04",
-      "department": "Sale"
     }
+  
   ]
 }

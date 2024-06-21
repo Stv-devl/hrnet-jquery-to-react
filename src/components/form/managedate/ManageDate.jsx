@@ -5,10 +5,11 @@ import { dateYearsAgo, isoDate } from "../../../utils/dateFormater";
 const ManageDate = ({ name, labelText, handleChange, selected, error }) => {
   return (
     <div className="input-wrapper">
-      <label htmlFor={name}>{`${labelText}:`}</label>
+      <label className="label" htmlFor={name}>{`${labelText}:`}</label>
       <DatePicker
         name={name}
         id={name}
+        className="date-picker"
         placeholderText="dd/mm/yyyy"
         dateFormat="dd/MM/yyyy"
         minDate={name === "start" ? "2000-01-01" : dateYearsAgo(70)}

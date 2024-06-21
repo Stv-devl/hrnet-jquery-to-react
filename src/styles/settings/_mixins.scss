@@ -41,6 +41,11 @@
   flex-direction: column;
   align-items: center;
 }
+@mixin center-column-align {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 
 @mixin center-column {
   display: flex;
@@ -75,7 +80,7 @@
   @include center-row;
   gap: 10px;
   border: none;
-  background-color: $backgroundlightGreen;
+  background-color: $backgroundGreen;
   padding: 15px 20px;
   border-radius: 15px;
   cursor: pointer;
@@ -83,7 +88,46 @@
   @include shadow02;
 
   &:hover {
-    background-color: $backgroundGreen;
+    background-color: $backgroundDarkGreen;
     font-size: 18px;
   }
+
+  @media screen and (max-width: $breakup) {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    gap: 5px;
+
+    &:hover {
+      font-size: 15px;
+    }
+  }
+}
+
+@mixin input01 {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border: 2px solid $textLightGrey;
+  border-radius: 8px;
+  background-color: $backgroundLightGrey;
+  transition: border-color 0.3s ease-in-out;
+  @include shadow02;
+
+  &:focus {
+    border-color: $backgroundGreen;
+  }
+
+  @media screen and (max-width: $breakup) {
+    height: 38px;
+  }
+}
+
+@mixin input02 {
+  @include input01;
+  width: 100px;
+}
+
+@mixin input03 {
+  @include input01;
+  width: 250px;
 }

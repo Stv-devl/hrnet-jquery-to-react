@@ -13,8 +13,11 @@ const Dropdown = ({
 
   return (
     <div className="input-wrapper">
-      <label htmlFor={name}>{labelText}</label>
+      <label className="label" htmlFor={name}>
+        {labelText}
+      </label>
       <select
+        className="dropdown"
         id={name}
         name={name}
         value={value}

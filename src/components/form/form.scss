@@ -4,6 +4,11 @@ form {
   border-radius: 20px;
   @include shadow;
 
+  @media screen and (max-width: $breakup) {
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
+
   .title-wrapper {
     display: flex;
     flex-direction: column;
@@ -12,10 +17,35 @@ form {
     margin-bottom: 10px;
     border-bottom: 2px solid $textLightGrey;
 
+    @media screen and (max-width: $breakup) {
+      margin-bottom: 5px;
+    }
+
     .input-container {
       display: flex;
       flex-direction: row;
       gap: 30px;
+    }
+
+    .input-wrapper {
+      @include direction-column;
+      margin-bottom: 15px;
+      width: 100%;
+
+      .label {
+        margin-bottom: 5px;
+      }
+
+      .dropdown,
+      .form-input,
+      .date-picker {
+        @include input01;
+      }
+      .error-message {
+        color: $textRed;
+        font-size: 12px;
+        margin-top: 7px;
+      }
     }
   }
 
@@ -23,7 +53,11 @@ form {
     @include center-row;
     margin-top: 20px;
 
-    button {
+    @media screen and (max-width: $breakup) {
+      margin-top: 10px;
+    }
+
+    .add-button {
       @include button;
     }
   }

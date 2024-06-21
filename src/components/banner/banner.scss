@@ -5,11 +5,24 @@
   padding: 0 40px;
   @include shadow;
 
+  @media screen and (max-width: $breakup) {
+    @include direction-column;
+    gap: 5px;
+  }
+
   .title-wrapper {
     @include center-row;
     gap: 20px;
+    @media screen and (max-width: $breakup) {
+      gap: 20px;
+      margin-top: 2px;
+    }
     .main-nav-logo-image {
       width: 110px;
+
+      @media screen and (max-width: $breakup) {
+        width: 50px;
+      }
     }
   }
 

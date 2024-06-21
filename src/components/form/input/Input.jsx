@@ -1,8 +1,11 @@
 const Input = ({ name, labelText, handleChange, value, error }) => {
   return (
     <div className="input-wrapper">
-      <label htmlFor={name}>{labelText}</label>
+      <label className="label" htmlFor={name}>
+        {labelText}
+      </label>
       <input
+        className="form-input"
         type="text"
         id={name}
         name={name}
