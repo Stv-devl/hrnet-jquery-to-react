@@ -1319,7 +1319,18 @@
       "state": "New York",
       "start_date": "1997-10-22",
       "department": "Sale"
+    },
+    {
+      "id": "5f4c5156-b5f1-40b2-a75f-e686e3b889de",
+      "firstname": "David",
+      "lastname": "Robert",
+      "birthday": "2001-02-02",
+      "street": "77 Massachusetts Avenue",
+      "city": "Boston",
+      "zip_code": "56565",
+      "state": "Arizona",
+      "start_date": "2022-05-27",
+      "department": "Sale"
     }
-  
   ]
 }
