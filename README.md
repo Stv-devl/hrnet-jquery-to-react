@@ -1,75 +1,76 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# P14-Faites-passer-une-librairie-jQuery-vers-React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [Description](#Description)
+  - [Builtwith](#Built-with)
+- [Install](#Install)
+  - [Launch](#Launch)
+- [Author](#author)
 
-In the project directory, you can run:
+## Overview
 
-### `yarn start`
+### Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This repo contains all the source code to run the FrontEnd of the HRnet app.
+The HRnet app is an exercice from [Openclassroom](https://openclassrooms.com/) for the bachelor level class "Application Developer - JavaScript React"
+In this app we will use a JsonServer who create a json server for simulate a backend and we will build the frontend with REACT.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Built-with
 
-### `yarn test`
+- [React](https://reactjs.org/) - JS library
+- [React Router DOM](https://reactrouter.com/) - For rooter
+- [SASS](https://sass-lang.com/) - CSS pre-processor
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Install
 
-### `yarn build`
+Clone the project :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/Stv-devl/hrnet-jquery-to-react.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Launch
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Intall npm :
 
-### `yarn eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Launch the simulate backend :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run server
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Launch the FrontEnd :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+#### Versions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- "@fortawesome/fontawesome-free": "^6.5.1",
+- "@fortawesome/fontawesome-svg-core": "^6.5.1",
+- "@fortawesome/free-solid-svg-icons": "^6.5.1",
+- "@fortawesome/react-fontawesome": "^0.2.0",
+- "@testing-library/jest-dom": "^5.14.1",
+- "@testing-library/react": "^13.0.0",
+- "@testing-library/user-event": "^13.2.1",
+- "react": "^18.2.0",
+- "react-datepicker": "^6.6.0",
+- "react-dom": "^18.2.0",
+- "react-router-dom": "^6.22.3",
+- "react-scripts": "5.0.1",
+- "react-simple-table-component-v1": "^1.1.3",
+- "uuid": "^9.0.1",
+- "web-vitals": "^2.1.0",
+- "yup": "^1.4.0"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Author
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# hrnet-jquery-to-react
-P14 HRnet 
->>>>>>> 3a92b4e216738559747d4b31f7c1e3c93d49fa6c
+- Github - [Stv-devl](https://github.com/Stv-devl/)
+- Link to the app - [HRnet](https://)
