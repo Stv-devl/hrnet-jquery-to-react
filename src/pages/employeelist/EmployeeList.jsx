@@ -15,8 +15,6 @@ const EmployeeList = () => {
   const { data, loading, error } = useContext(ApiContext);
   const { arrayHeader } = datas;
 
-  console.log(arrayHeader);
-
   return (
     <>
       {loading ? (

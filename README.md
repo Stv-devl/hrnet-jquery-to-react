@@ -13,7 +13,8 @@
 
 ### Description
 
-This repo contains all the source code to run the FrontEnd of the HRnet app.
+This repo contains
+all the source code to run the FrontEnd of the HRnet app.
 The HRnet app is an exercice from [Openclassroom](https://openclassrooms.com/) for the bachelor level class "Application Developer - JavaScript React"
 In this app we will use a JsonServer who create a json server for simulate a backend and we will build the frontend with REACT.
 
@@ -65,7 +66,7 @@ npm start
 - "react-dom": "^18.2.0",
 - "react-router-dom": "^6.22.3",
 - "react-scripts": "5.0.1",
-- "react-simple-table-component-v1": "^1.1.3",
+- ["react-simple-table-component-v1": "^1.1.3"](https://www.npmjs.com/package/react-simple-table-component-v1),
 - "uuid": "^9.0.1",
 - "web-vitals": "^2.1.0",
 - "yup": "^1.4.0"
