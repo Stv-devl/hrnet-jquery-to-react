@@ -13,7 +13,9 @@ import Table from "react-simple-table-component-v1";
 
 const EmployeeList = () => {
   const { data, loading, error } = useContext(ApiContext);
-  const { legend } = datas;
+  const { arrayHeader } = datas;
+
+  console.log(arrayHeader);
 
   return (
     <>
@@ -21,15 +23,7 @@ const EmployeeList = () => {
         <Loading />
       ) : (
         <main>
-          <Table
-            datas={data}
-            legend={legend}
-            theadColor="#72d683"
-            firstFieldColor="#ffffff"
-            secondFieldColor="#c2fbcc"
-            pagingColor="#72d683"
-            checkedBtn="#5cc36c"
-          />
+          <Table datas={data} arrayHeader={arrayHeader} />
         </main>
       )}
     </>

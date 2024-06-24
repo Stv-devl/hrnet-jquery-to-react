@@ -72,21 +72,21 @@ const initialState = {
   department: "",
 };
 
-const legend = [
+const header = [
   { name: "firstname", label: "First name" },
   { name: "lastname", label: "Last Name" },
-  { name: "start_date", label: "Start date" },
-  { name: "department", label: "Department" },
   { name: "birthday", label: "Date of Birth" },
   { name: "street", label: "Street" },
   { name: "city", label: "City" },
-  { name: "state", label: "State" },
   { name: "zip_code", label: "Zip Code" },
+  { name: "state", label: "State" },
+  { name: "start_date", label: "Start date" },
+  { name: "department", label: "Department" },
 ];
 
 export const datas = {
   department: dataDepartment,
   state: americanStates,
   initialState: initialState,
-  legend: legend,
+  arrayHeader: header,
 };
