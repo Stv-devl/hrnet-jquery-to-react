@@ -20,14 +20,15 @@
     "web-vitals": "^2.1.0",
     "yup": "^1.4.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server --watch src/data/workers.json --port 3004",
-    "deploy": "npm run build && node server.js"
-  },
+"scripts": {
+  "start": "json-server --watch src/data/workers.json --port 3004 & react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "deploy": "npm run build && npm start"
+},
+
+
   "eslintConfig": {
     "extends": [
       "react-app",
