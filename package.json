@@ -2,7 +2,7 @@
   "name": "hrnet-jquery-to-react",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://Stv-devl.github.io/hrnet-jquery-to-react",
+  "homepage": "https://Stv-devl.github.io/hrnet-jquery-to-react",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -15,7 +15,6 @@
     "react-datepicker": "^6.6.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
     "react-simple-table-component-v1": "^1.1.7",
     "uuid": "^9.0.1",
     "web-vitals": "^2.1.0",
@@ -28,7 +27,6 @@
     "eject": "react-scripts eject",
     "server": "json-server --watch src/data/workers.json --port 3004",
     "deploy": "npm run build && npm run server"
-
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +49,7 @@
   "devDependencies": {
     "css-loader": "^7.1.2",
     "json-server": "^1.0.0-alpha.23",
+    "react-scripts": "^5.0.1",
     "sass": "^1.77.5",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
