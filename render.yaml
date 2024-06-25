@@ -3,13 +3,8 @@ services:
     name: hrnet
     env: node
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: rm -rf node_modules && npm install && npm run buil
     startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: REACT_APP_API_BASE_URL
-        fromFile: .env.production
     staticPublishPath: build
 
   - type: web
