@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hrnet-jquery-to-react.git/static/css/main.5c462f03.css",
+    "main.js": "/hrnet-jquery-to-react.git/static/js/main.40fec716.js",
+    "index.html": "/hrnet-jquery-to-react.git/index.html",
+    "main.5c462f03.css.map": "/hrnet-jquery-to-react.git/static/css/main.5c462f03.css.map",
+    "main.40fec716.js.map": "/hrnet-jquery-to-react.git/static/js/main.40fec716.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c462f03.css",
+    "static/js/main.40fec716.js"
+  ]
+}
