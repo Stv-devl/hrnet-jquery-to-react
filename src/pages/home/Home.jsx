@@ -8,7 +8,7 @@ const Home = () => {
     <main>
       <h1>Home page</h1>
       <p className="home-text">Welcome to HRnet management dashboard</p>
-      <img src="image01.png" alt="dahsboard" className="home-image" />
+      {/* <img src="image01.webp" alt="dahsboard" className="home-image" />*/}
     </main>
   );
 };

@@ -24,7 +24,7 @@ body {
 main {
   @include center-column-align;
   flex-wrap: wrap;
-  padding-top: 20px;
+  margin-top: 30px;
   flex: 1;
 }
 

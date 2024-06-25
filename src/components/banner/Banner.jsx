@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faList } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,24 +11,24 @@ const Banner = () => {
   return (
     <nav className="main-nav">
       <div className="title-wrapper">
-        <Link className="main-nav-logo" to={`/home`}>
+        <NavLink className="main-nav-logo" to={`/home`}>
           <img
             className="main-nav-logo-image"
-            src="./logo.png"
+            src="./logo.webp"
             alt="HRnet Logo"
           />
-        </Link>
+        </NavLink>
         <p className="title">HRnet</p>
       </div>
       <div className="nav-Wrapper">
-        <Link className="nav-link" to={`/add`}>
+        <NavLink className="nav-link" to={`/add`}>
           <FontAwesomeIcon icon={faPlus} />
           <p> Add worker</p>
-        </Link>
-        <Link className="nav-link" to={`/list`}>
+        </NavLink>
+        <NavLink className="nav-link" to={`/list`}>
           <FontAwesomeIcon icon={faList} />
           <p> Labour list</p>
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );

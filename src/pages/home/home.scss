@@ -5,13 +5,9 @@
 }
 
 .home-image {
-  width: 800px;
+  width: 630px;
   border-radius: 20px;
   margin-top: 50px;
-
-  @media screen and (max-width: 810px) {
-    width: 630px;
-  }
 
   @media screen and (max-width: $breakup) {
     width: 310px;

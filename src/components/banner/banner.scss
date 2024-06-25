@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 10px 40px;
   @include shadow;
 
   @media screen and (max-width: $breakup) {
@@ -18,7 +18,9 @@
       margin-top: 2px;
     }
     .main-nav-logo-image {
-      width: 110px;
+      margin-top: 5px;
+      width: 60px;
+      height: 60px;
 
       @media screen and (max-width: $breakup) {
         width: 50px;
