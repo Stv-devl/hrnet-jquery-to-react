@@ -1,4 +1,4 @@
-import Form from "../../components/form/Form.jsx";
+import Form from "../../components/form/Form";
 
 /**
  * CreateEmployee component
