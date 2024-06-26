@@ -3,8 +3,8 @@ import { ApiContext } from "../../context/ManageApi";
 import { datas } from "../../data/datas";
 import Loading from "../../components/loading/Loading";
 import Error from "../../components/error/Error";
-/*import Table from "../../components/table/Table";*/
-import Table from "react-simple-table-component-v1";
+import Table from "../../components/table/Table";
+/*import Table from "react-simple-table-component-v1";*/
 
 /**
  * EmployeeList component
@@ -16,11 +16,13 @@ const EmployeeList = () => {
   const { data, loading, error } = useContext(ApiContext);
   const { arrayHeader } = datas;
 
+  const isDataValid = Array.isArray(data);
+
   return (
     <>
       {loading ? (
         <Loading />
-      ) : error && !data ? (
+      ) : error && !isDataValid && data.length > 0 ? (
         <Error />
       ) : (
         <main>

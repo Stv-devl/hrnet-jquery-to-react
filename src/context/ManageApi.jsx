@@ -28,6 +28,7 @@ function ApiProvider({ children }) {
         const resData = await apiService();
         setData(resData);
       } catch (err) {
+        console.error("Error fetching data:", err);
         setError(err);
         setData(mockedData.workers);
       } finally {

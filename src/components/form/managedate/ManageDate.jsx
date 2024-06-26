@@ -14,7 +14,6 @@ import { dateYearsAgo, isoDate } from "../../../utils/dateFormater";
  */
 
 const ManageDate = ({ name, labelText, handleChange, selected, error }) => {
-  console.log(name);
   return (
     <div className="input-wrapper">
       <label className="label" htmlFor={name}>{`${labelText}:`}</label>
