@@ -74,4 +74,4 @@ npm start
 ## Author
 
 - Github - [Stv-devl](https://github.com/Stv-devl/)
-- Link to the app - [HRnet](https://)
+- Link to the app - [HRnet](https://hrnet-stv.netlify.app/)
