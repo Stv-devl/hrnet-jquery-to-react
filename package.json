@@ -2,9 +2,8 @@
   "name": "hrnet-jquery-to-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Stv-devl.github.io/hrnet-jquery-to-react",
+  "homepage": "",
   "dependencies": {
-    "json-server": "^1.0.0-alpha.23",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
@@ -50,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "json-server": "^1.0.0-alpha.23",
     "css-loader": "^7.1.2",
     "react-scripts": "^5.0.1",
     "sass": "^1.77.5",
