@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect, useCallback } from "react";
 import apiService from "../services/apiService";
+import { mockedData } from "../data/mockedData";
 
 export const ApiContext = createContext();
 
@@ -28,6 +29,7 @@ function ApiProvider({ children }) {
         setData(resData);
       } catch (err) {
         setError(err);
+        setData(mockedData.workers);
       } finally {
         setLoading(false);
       }

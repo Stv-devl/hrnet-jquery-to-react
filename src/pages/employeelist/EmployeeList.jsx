@@ -20,7 +20,7 @@ const EmployeeList = () => {
     <>
       {loading ? (
         <Loading />
-      ) : error ? (
+      ) : error && !data ? (
         <Error />
       ) : (
         <main>
