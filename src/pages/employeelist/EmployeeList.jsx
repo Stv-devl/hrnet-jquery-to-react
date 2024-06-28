@@ -28,11 +28,13 @@ const EmployeeList = () => {
       ) : (
         <main>
           <h1>Current Employees :</h1>
-          <Table
-            datas={data}
-            arrayHeader={arrayHeader}
-            fontSetting={"roboto"}
-          />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Table
+              datas={data}
+              arrayHeader={arrayHeader}
+              fontSetting={"roboto"}
+            />
+          </Suspense>
         </main>
       )}
     </>
