@@ -1,10 +1,11 @@
+import React, { Suspense, lazy } from "react";
 import { useContext } from "react";
 import { ApiContext } from "../../context/ManageApi";
 import { datas } from "../../data/datas";
 import Loading from "../../components/loading/Loading";
 import Error from "../../components/error/Error";
 /*import Table from "../../components/table/Table";*/
-import Table from "react-simple-table-component-v1";
+const Table = lazy(() => import("react-simple-table-component-v1"));
 
 /**
  * EmployeeList component
@@ -27,7 +28,11 @@ const EmployeeList = () => {
       ) : (
         <main>
           <h1>Current Employees :</h1>
-          <Table datas={data} arrayHeader={arrayHeader} />
+          <Table
+            datas={data}
+            arrayHeader={arrayHeader}
+            fontSetting={"roboto"}
+          />
         </main>
       )}
     </>
