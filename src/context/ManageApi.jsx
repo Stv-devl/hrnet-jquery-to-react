@@ -45,7 +45,7 @@ function ApiProvider({ children }) {
     };
 
     fetchData();
-  }, []);
+  }, [mockedDataMemo]);
 
   return (
     <ApiContext.Provider value={{ data, updateData, loading, error }}>
