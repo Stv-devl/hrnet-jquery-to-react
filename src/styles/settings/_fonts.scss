@@ -1,11 +1,8 @@
-/****************************setting fonts***************************/
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-
 /**************************setting text***************************/
-
-body {
+* {
   font-family: "Roboto", sans-serif;
+}
+body {
   font-size: 16px;
   font-weight: 500;
   color: $textBlack;

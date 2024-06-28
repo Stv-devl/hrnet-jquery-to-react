@@ -1,4 +1,10 @@
-import { createContext, useState, useEffect, useCallback } from "react";
+import {
+  createContext,
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+} from "react";
 import apiService from "../services/apiService";
 import { mockedData } from "../data/mockedData";
 
@@ -21,6 +27,8 @@ function ApiProvider({ children }) {
     setData((prevData) => [...prevData, newData]);
   }, []);
 
+  const mockedDataMemo = useMemo(() => mockedData.workers, []);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,7 +38,7 @@ function ApiProvider({ children }) {
       } catch (err) {
         console.error("Error fetching data:", err);
         setError(err);
-        setData(mockedData.workers);
+        setData(mockedDataMemo);
       } finally {
         setLoading(false);
       }

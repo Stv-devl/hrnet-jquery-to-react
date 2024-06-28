@@ -16,13 +16,13 @@ const EmployeeList = () => {
   const { data, loading, error } = useContext(ApiContext);
   const { arrayHeader } = datas;
 
-  const isDataValid = Array.isArray(data);
+  const isDataValid = Array.isArray(data) && data.length > 0;
 
   return (
     <>
       {loading ? (
         <Loading />
-      ) : error && !isDataValid && data.length > 0 ? (
+      ) : error && !isDataValid ? (
         <Error />
       ) : (
         <main>
