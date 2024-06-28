@@ -21,5 +21,8 @@
 .env.test.local
 .env.production.local
 
+.gitignore
+/serve.json
+
 npm-debug.log*
 

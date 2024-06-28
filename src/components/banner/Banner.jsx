@@ -14,7 +14,7 @@ const Banner = () => {
         <NavLink className="main-nav-logo" to={`/home`}>
           <img
             className="main-nav-logo-image"
-            src="./logo.webp"
+            src="https://hrnet-stv.netlify.app/logo.webp"
             alt="HRnet Logo"
           />
         </NavLink>
