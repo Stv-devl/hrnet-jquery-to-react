@@ -34,6 +34,12 @@ git clone https://github.com/Stv-devl/hrnet-jquery-to-react.git
 
 ### Launch
 
+Node.js version :
+
+```bash
+- Node : "20.11.0
+```
+
 Intall npm :
 
 ```bash
@@ -54,22 +60,22 @@ npm start
 
 #### Versions
 
-- "@fortawesome/fontawesome-free": "^6.5.1",
-- "@fortawesome/fontawesome-svg-core": "^6.5.1",
-- "@fortawesome/free-solid-svg-icons": "^6.5.1",
-- "@fortawesome/react-fontawesome": "^0.2.0",
-- "@testing-library/jest-dom": "^5.14.1",
-- "@testing-library/react": "^13.0.0",
-- "@testing-library/user-event": "^13.2.1",
-- "react": "^18.2.0",
-- "react-datepicker": "^6.6.0",
-- "react-dom": "^18.2.0",
-- "react-router-dom": "^6.22.3",
+- "@fortawesome/fontawesome-free": "6.5.1",
+- "@fortawesome/fontawesome-svg-core": "6.5.1",
+- "@fortawesome/free-solid-svg-icons": "6.5.1",
+- "@fortawesome/react-fontawesome": "0.2.0",
+- "@testing-library/jest-dom": "5.14.1",
+- "@testing-library/react": "13.0.0",
+- "@testing-library/user-event": "13.2.1",
+- "react": "18.2.0",
+- "react-datepicker": "6.6.0",
+- "react-dom": "18.2.0",
+- "react-router-dom": "6.22.3",
 - "react-scripts": "5.0.1",
 - ["react-simple-table-component-v1": "^1.1.3"](https://www.npmjs.com/package/react-simple-table-component-v1),
-- "uuid": "^9.0.1",
-- "web-vitals": "^2.1.0",
-- "yup": "^1.4.0"
+- "uuid": "9.0.1",
+- "web-vitals": "2.1.0",
+- "yup": "1.4.0"
 
 ## Author
 
