@@ -1331,6 +1331,18 @@
       "state": "Arizona",
       "start_date": "2022-05-27",
       "department": "Sale"
+    },
+    {
+      "id": "06faf942-e8d7-40c1-b23f-73419ea10c81",
+      "firstname": "David",
+      "lastname": "Dupont",
+      "birthday": "2000-03-11",
+      "street": "77 Massachusetts Avenue",
+      "city": "Los Angeles ",
+      "zip_code": "56565",
+      "state": "Arizona",
+      "start_date": "2024-06-05",
+      "department": "Marketing"
     }
   ]
 }
