@@ -72,7 +72,7 @@ npm start
 - "react-dom": "18.2.0",
 - "react-router-dom": "6.22.3",
 - "react-scripts": "5.0.1",
-- ["react-simple-table-component-v1": "^1.1.3"](https://www.npmjs.com/package/react-simple-table-component-v1),
+- ["react-simple-table-component-v1": "^1.1.8"](https://www.npmjs.com/package/react-simple-table-component-v1),
 - "uuid": "9.0.1",
 - "web-vitals": "2.1.0",
 - "yup": "1.4.0"
