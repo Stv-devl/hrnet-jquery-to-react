@@ -1,11 +1,11 @@
-import React, { Suspense, lazy } from "react";
-import { useContext } from "react";
-import { ApiContext } from "../../context/ManageApi";
-import { datas } from "../../data/datas";
-import Loading from "../../components/loading/Loading";
-import Error from "../../components/error/Error";
-/*import Table from "../../components/table/Table";*/
-const Table = lazy(() => import("react-simple-table-component-v1"));
+import React, { Suspense, lazy } from 'react';
+import { useContext } from 'react';
+import { ApiContext } from '../../context/ManageApi';
+import { datas } from '../../data/datas';
+import Loading from '../../components/loading/Loading';
+import Error from '../../components/error/Error';
+/*import Table from '../../components/table/Table';*/
+const Table = lazy(() => import('react-simple-table-component-v1'));
 
 /**
  * EmployeeList component
@@ -28,11 +28,14 @@ const EmployeeList = () => {
       ) : (
         <main>
           <h1>Current Employees :</h1>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
             <Table
               datas={data}
               arrayHeader={arrayHeader}
-              fontSetting={"roboto"}
+              // fontUrl={
+              //   'https://fonts.googleapis.com/css2?family=Margarine&display=swap'
+              // }
+              // fontSetting={'Margarine, sans-serif'}
             />
           </Suspense>
         </main>

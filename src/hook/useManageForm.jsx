@@ -17,8 +17,6 @@ const useManageForm = (setIsModalOpen) => {
 
   const [formData, setFormData] = useState(initialState);
 
-  console.log(formData.firstname);
-
   const { errors, validateFormData } = useValidation(formData);
   const { updateData } = useContext(ApiContext);
 
@@ -46,7 +44,6 @@ const useManageForm = (setIsModalOpen) => {
         const uniqueId = uuidv4();
         const updatedFormData = { ...formData, id: uniqueId };
         console.log('Validation success:', updatedFormData);
-
         const newEmployeeData = await postService(updatedFormData);
         updateData(newEmployeeData);
 
