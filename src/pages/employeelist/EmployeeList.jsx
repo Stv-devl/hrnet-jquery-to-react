@@ -4,8 +4,8 @@ import { ApiContext } from '../../context/ManageApi';
 import { datas } from '../../data/datas';
 import Loading from '../../components/loading/Loading';
 import Error from '../../components/error/Error';
-/*import Table from '../../components/table/Table';*/
-const Table = lazy(() => import('react-simple-table-component-v1'));
+import Table from '../../components/table/Table';
+/*const Table = lazy(() => import('react-simple-table-component-v1'));*/
 
 /**
  * EmployeeList component
@@ -32,10 +32,7 @@ const EmployeeList = () => {
             <Table
               datas={data}
               arrayHeader={arrayHeader}
-              // fontUrl={
-              //   'https://fonts.googleapis.com/css2?family=Margarine&display=swap'
-              // }
-              // fontSetting={'Margarine, sans-serif'}
+              fontSetting={'Roboto, sans-serif'}
             />
           </Suspense>
         </main>

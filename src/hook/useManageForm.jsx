@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useCallback, useContext, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { datas } from '../data/datas';
 import useValidation from './useValidation';
@@ -24,12 +24,12 @@ const useManageForm = (setIsModalOpen) => {
    * Handles changes to the form data.
    * @param {Object} updates - The updates to be applied to the form data.
    */
-  const handleChange = (updates) => {
+  const handleChange = useCallback((updates) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
       ...updates,
     }));
-  };
+  }, []);
 
   /**
    * Handles form submission.
@@ -58,12 +58,7 @@ const useManageForm = (setIsModalOpen) => {
     }
   };
 
-  return {
-    formData,
-    errors,
-    handleChange,
-    handleSubmit,
-  };
+  return { formData, errors, handleChange, handleSubmit };
 };
 
 export default useManageForm;
