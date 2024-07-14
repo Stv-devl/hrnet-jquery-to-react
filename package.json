@@ -16,7 +16,7 @@
     "react-datepicker": "^6.6.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
-    "react-simple-table-component-v1": "^1.1.9",
+    "react-simple-table-component-v1": "^1.2.0",
     "uuid": "^9.0.1",
     "web-vitals": "^2.1.0",
     "yup": "^1.4.0"
